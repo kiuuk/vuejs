@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello Vue</title>
-  <script src="/js/app.js"></script>
 </head>
 <body>
 
@@ -20,5 +19,13 @@
     </template>
   </div>
 
+  <div id="app-btn">
+    <button type="button" @click="add">PLUS</button>
+    {{counter}}
+    <button type="button" @click="minus">MINUS</button>
+    <div></div>
+  </div>
+
+  <script src="/dist/app.js"></script>
 </body>
 </html>

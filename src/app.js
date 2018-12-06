@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Vue from 'vue';
+require('./style/style.scss');
 
 window.$ = window.jQuery = $;
 
@@ -11,6 +12,36 @@ $(function(){
     }
   })
 });
+
+$(function(){
+  new Vue({
+    el: '#app-btn',
+    data() {
+      return {
+        counter: 0
+      };
+    },
+    methods: {
+      add() {
+        if (this.counter >= 0) {
+          this.counter ++;
+        } else {
+          return;
+        }
+      },
+      minus() {
+        if (this.counter > 0) {
+          this.counter --;
+        } else {
+          return;
+        }
+      },
+      btnClick() {
+
+      }
+    }
+  })
+})
 
 $(function(){
   new Vue(
