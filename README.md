@@ -1,5 +1,4 @@
 # vuejs
-vue.js setup
 
 npm init -y
 

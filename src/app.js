@@ -4,6 +4,23 @@ require('./style/style.scss');
 
 window.$ = window.jQuery = $;
 
+
+$(function(){
+  Vue.component('card', {
+    props: ['image', 'title', 'description'],
+    template: `
+      <dl>
+        <dt>{{ title }}</dt>
+        <dd><img :src="image" alt=""></dd>
+        <dd>{{ description }}</dd>
+      </dl>
+    `
+  });
+  new Vue({
+    el: '#app-component'
+  });
+});
+
 $(function(){
   new Vue({
     el: '#app',
@@ -35,9 +52,6 @@ $(function(){
         } else {
           return;
         }
-      },
-      btnClick() {
-
       }
     }
   })
