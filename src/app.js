@@ -67,17 +67,17 @@ $(function(){
           {
             id: 1,
             title: 'img-1',
-            images: 'https://dummyimage.com/120x120/efefef/999999&text=1'
+            images: 'https://via.placeholder.com/150'
           },
           {
             id: 2,
             title: 'img-2',
-            images: 'https://dummyimage.com/120x120/efefef/999999&text=2'
+            images: 'https://via.placeholder.com/150'
           },
           {
             id: 3,
             title: 'img-3',
-            images: 'https://dummyimage.com/120x120/efefef/999999&text=3'
+            images: 'https://via.placeholder.com/150'
           }
         ]
       }
