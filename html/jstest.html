@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS TEST</title>
+</head>
+<body>
+    <script>
+        let vals = "It was a dark and stormy night";
+        let words = vals.split(' ').filter(word => word.length > 2);
+        words.sort((a, b) => b.length - a.length);
+        console.log(words);
+    </script>
+</body>
+</html>

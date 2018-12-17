@@ -4,7 +4,6 @@ require('./style/style.scss');
 
 window.$ = window.jQuery = $;
 
-
 $(function(){
   Vue.component('card', {
     props: ['image', 'title', 'description'],
@@ -72,11 +71,6 @@ $(function(){
           {
             id: 2,
             title: 'img-2',
-            images: 'https://via.placeholder.com/150'
-          },
-          {
-            id: 3,
-            title: 'img-3',
             images: 'https://via.placeholder.com/150'
           }
         ]
