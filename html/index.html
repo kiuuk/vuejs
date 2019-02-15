@@ -1,37 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello Vue</title>
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
     <div id="app">
-      <h1>{{message}}</h1>
-      <input type="text" v-model="message">
+      <search-box></search-box>
     </div>
-
-    <div id="app-list">
-      <template v-for="item in items">
-        <dl>
-          <dt>{{item.title}}</dt>
-          <dd><img :id="`img-${item.id}`" :src="item.images" alt=""></dd>
-        </dl>
-      </template>
-    </div>
-
-    <div id="app-btn">
-      <button type="button" @click="add" class="btn btn-primary">PLUS</button>
-      {{counter}}
-      <button type="button" @click="minus" class="btn btn-primary">MINUS</button>
-    </div>
-
-    <div id="app-component">
-      <card image="https://via.placeholder.com/150" title="Lorem Ipsum" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s">
-      </card>
-    </div>
-  </div>
-
-  <script src="/dist/app.js"></script>
-</body>
+    <script src="/dist/app.js"></script>
+  </body>
 </html>
