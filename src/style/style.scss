@@ -1,2 +1,10 @@
 @import url("./reset.scss");
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
+
+.list-group {
+  margin-top: -1px;
+}
+.form-control:focus {
+  border: 1px solid #ced4da;
+  box-shadow: none;
+}
