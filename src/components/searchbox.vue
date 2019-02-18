@@ -10,6 +10,7 @@
             class="list-group-item list-group-item-action"
             v-for="(result,idx) in results"
             :key="idx"
+            @click="setResult(result)"
           >{{result.name}}</a>
         </div>
       </div>
@@ -50,6 +51,10 @@ export default {
       this.results = this.users.filter(
         user => user.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
       );
+    },
+    setResult(result) {
+      this.search = result.name;
+      this.isOpen = false;
     }
   }
 };
