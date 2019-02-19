@@ -3,7 +3,16 @@
     <form>
       <div class="form-group">
         <label for="searchInput">Search Suggestion</label>
-        <input type="text" class="form-control" id="searchInput" v-model="search" @input="onChange">
+        <input
+          type="text"
+          class="form-control"
+          id="searchInput"
+          v-model="search"
+          @input="onChange"
+          @keydown.down="onArrowDown"
+          @keydown.up="onArrowUp"
+          @keydown.enter="onEnter"
+        >
         <div class="list-group" v-show="isOpen">
           <a
             href="#"
@@ -11,6 +20,7 @@
             v-for="(result,idx) in results"
             :key="idx"
             @click="setResult(result)"
+            :class="{ 'is-active': idx === arrowCounter }"
           >{{result.name}}</a>
         </div>
       </div>
@@ -27,7 +37,8 @@ export default {
       search: "",
       users: [],
       results: [],
-      isOpen: false
+      isOpen: false,
+      arrowCounter: -1
     };
   },
   mounted() {
@@ -55,6 +66,21 @@ export default {
     setResult(result) {
       this.search = result.name;
       this.isOpen = false;
+    },
+    onArrowDown() {
+      if (this.arrowCounter < this.results.length) {
+        this.arrowCounter = this.arrowCounter + 1;
+      }
+    },
+    onArrowUp() {
+      if (this.arrowCounter < this.results.length) {
+        this.arrowCounter = this.arrowCounter - 1;
+      }
+    },
+    onEnter() {
+      this.search = this.results[this.arrowCounter].name;
+      this.isOpen = false;
+      this.arrowCounter = -1;
     }
   }
 };
