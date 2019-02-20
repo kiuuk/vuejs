@@ -68,12 +68,12 @@ export default {
       this.isOpen = false;
     },
     onArrowDown() {
-      if (this.arrowCounter < this.results.length) {
+      if (this.arrowCounter < this.results.length - 1) {
         this.arrowCounter = this.arrowCounter + 1;
       }
     },
     onArrowUp() {
-      if (this.arrowCounter < this.results.length) {
+      if (this.arrowCounter < this.results.length && this.arrowCounter > 0) {
         this.arrowCounter = this.arrowCounter - 1;
       }
     },
