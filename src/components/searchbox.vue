@@ -7,6 +7,7 @@
           type="text"
           class="form-control"
           id="searchInput"
+          autocomplete="off"
           v-model="search"
           @input="onChange"
           @keydown.down="onArrowDown"
